@@ -18,8 +18,17 @@
     border-radius: 15px;
     border: 1px solid;
     margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 #playerName {
     text-align: center;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
 }
