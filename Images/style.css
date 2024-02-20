@@ -19,9 +19,17 @@
     border: 1px solid;
     margin-right: 10px;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.box img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.box-text {
+    margin-top: 10px;
 }
 
 .button {
@@ -29,7 +37,7 @@
     flex-direction: row;
 }
 
-#playerNameImput {
+#playerNameInput {
     border-radius: 20px;
     padding: 10px;
     margin: 0 auto;
