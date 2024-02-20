@@ -18,3 +18,11 @@
     border: 1px solid;
     margin-right: 10px;
 }
+
+#playerNameImput {
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 30px;
+}
