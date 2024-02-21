@@ -23,23 +23,30 @@
     </header>
     <main>
         <input type="text" id="playerNameInput" placeholder="Enter your Name">
-        <button onclick="savePlayerName()">Enter</button>
-
+        <button id="enterButton"    onclick="savePlayerName()">Enter</button>
 
 
 
         <div class="container">
             <div class="row">
-                <button class="box">
-                    <img src="img\istockphoto-1193635902-612x612.jpg" alt="">
-                    <div class="box-text">Rock</div>
-                </button>
-                <button class="box">
-                    <img src="rock.jpeg" alt="">
-                </button>
-                <button class="box">
-                    <img src="rock.jpeg" alt="">
-                </button>
+                <div class="box">
+                    <button>
+                        <img src="img\istockphoto-1193635902-612x612.jpg" alt="">
+                        <div class="box-text">Rock</div>
+                    </button>
+                </div>
+                <div class="box">
+                    <button>
+                        <img src="img/paper.jpg" alt="">
+                        <div class="box-text">Paper</div>
+                    </button>
+                </div>
+                <div class="box">
+                    <button>
+                        <img src="img/scissors.jpg" alt="">
+                        <div class="box-text">Scissors</div>
+                    </button>
+                </div>
             </div>
         </div>
         <div id="playerName"></div>

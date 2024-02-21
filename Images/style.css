@@ -37,10 +37,33 @@
     flex-direction: row;
 }
 
+.box button {
+    border: none;
+    background-color: #d9d9d9; 
+}
+
 #playerNameInput {
+    position: fixed;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 20px;
     padding: 10px;
-    margin: 0 auto;
-    display: block;
-    margin-bottom: 30px;
+    z-index: 2;
+}
+
+#enterButton {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    padding: 10px;
+    z-index: 2;
+}
+
+#playerName {
+    left: 17%;
+    transform: translateX(-50%);
+    z-index: -1;
 }
