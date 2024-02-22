@@ -85,12 +85,14 @@
     }
 
     #playerNameInput {
+        position: fixed;
         bottom: 60px;
         left: 50%;
         transform: translateX(-50%);
     }
 
     #enterButton {
+        position: fixed;
         bottom: 10px;
         left: 50%;
         transform: translateX(-50%);
