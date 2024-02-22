@@ -16,6 +16,8 @@ function computerChoice () {
     const randomIndex = Math.floor(Math.random() * choices.length);
     return choices[randomIndex];
 }
-
+function playGame(playerMove){
 const computerMove = computerChoice();
-console.log ("Computer's move:" computerMove);
+console.log ("Computer's move:" + computerMove);
+console.log ("Player's move: " + playerMove)
+}

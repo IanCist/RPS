@@ -2,7 +2,7 @@
     position: fixed;
     bottom: 20px;
     left: 20px;
-   padding-bottom: 100px;
+    padding-bottom: 100px;
 }
 
 .row {
@@ -10,7 +10,7 @@
     flex-direction: row;
 }
 
-.box{
+.box {
     width: 147px;
     height: 147px;
     flex-shrink: 0;
@@ -21,6 +21,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 0;
 }
 
 .box img {
@@ -39,31 +41,58 @@
 
 .box button {
     border: none;
-    background-color: #d9d9d9; 
+    background-color: #d9d9d9;
 }
 
 #playerNameInput {
-    position: fixed;
-    bottom: 70px;
-    left: 50%;
-    transform: translateX(-50%);
     border-radius: 20px;
     padding: 10px;
-    z-index: 2;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 30px;
 }
 
 #enterButton {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
     border-radius: 20px;
     padding: 10px;
-    z-index: 2;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 30px;
 }
 
 #playerName {
+    position: fixed;
+    top: 20%;
     left: 17%;
-    transform: translateX(-50%);
-    z-index: -1;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding-bottom: 200px;
+    }
+
+    .row {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        margin-right: 5px;
+    }
+
+    #playerNameInput {
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #enterButton {
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
