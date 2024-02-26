@@ -4,7 +4,11 @@ function savePlayerName() {
     document.getElementById("playerName").innerText = "Player Name: " + playerName;
     alert("Player name saved successfully!")
 }
-
+function resetGame() {
+    document.getElementById("playerNameInput").value = "";
+    document.getElementById("playerName").innerText = "";
+    document.getElementById("gameResult").innerText = "";
+}
 var savedPlayerName = localStorage.getItem("playerName")
 if(savedPlayerName) {
     document.getElementById("playerName").innerText = "Player Name: " + savedPlayerName;
