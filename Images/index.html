@@ -22,11 +22,14 @@
             the games begin! </p>
     </header>
     <main>
-        <input type="text" id="playerNameInput" placeholder="Enter your Name">
-        <button id="enterButton"    onclick="savePlayerName()">Enter</button>
-        <button id="resetButton" onclick="resetGame()">Reset Game</button>
-
-
+        <div class="button-container">
+            <input type="text" id="playerNameInput" placeholder="Enter your Name">
+            <div class="button-row">
+                <button id="enterButton" onclick="savePlayerName()">Enter</button>
+                <button id="resetButton" onclick="resetGame()">Reset Game</button>
+            </div>
+        </div>
+        
         <div class="container">
             <div class="row">
                 <div class="box">
