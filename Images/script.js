@@ -16,15 +16,42 @@ if (savedPlayerName) {
 }
 
 function computerChoice() {
-    const choices = ["rock", "paper", "scissors"]
+    const choices = ["rock", "paper", "scissors"];
     const randomIndex = Math.floor(Math.random() * choices.length);
     return choices[randomIndex];
 }
+function displayComputerChoice(computerMove) {
+    const computerChoiceElement = document.getElementById("computerChoice");
+    computerChoiceElement.innerText = "Computer's Choice: " + computerMove;
+}
+
 function playGame(playerMove) {
     const computerMove = computerChoice();
     console.log("Computer's move:" + computerMove);
-    console.log("Player's move: " + playerMove)
+    console.log("Player's move: " + playerMove);
+
+
+    displayComputerChoice(computerMove);
+
+
+    if (playerMove === computerMove) {
+        console.log("It's a tie!");
+        return "It's a tie!";
+    }
+
+    if (
+        (playerMove === "rock" && computerMove === "scissors") ||
+        (playerMove === "paper" && computerMove === "rock") ||
+        (playerMove === "scissors" && computerMove === "paper")
+    ) {
+        console.log("Player wins!");
+        return "Player wins!";
+    }
+
+    console.log("Computer wins!");
+    return "Computer wins!";
 }
+
 
 const rockButtons = document.querySelectorAll('.rock');
 const paperButtons = document.querySelectorAll('.paper');
@@ -50,4 +77,10 @@ scissorButtons.forEach(button => {
 
 function savePlayerChoice(choice) {
     document.getElementById("playerChoice").innerHTML = "Players choice: " + choice;
+    displayResult(playGame(choice));
+}
+
+function displayResult(result) {
+    const gameResultElement = document.getElementById("gameResult");
+    gameResultElement.innerText = result;
 }
