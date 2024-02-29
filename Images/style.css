@@ -81,9 +81,18 @@
     z-index: 1;
 }
 
+#playerChoice {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
 @media screen and (max-width: 768px) {
     .container {
         padding-bottom: 200px;
+        justify-content: center;
     }
 
     .row {
