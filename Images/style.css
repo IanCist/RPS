@@ -1,10 +1,12 @@
 .container {
     position: fixed;
     bottom: 20px;
-    left: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     padding-bottom: 100px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .row {
@@ -83,10 +85,43 @@
 
 #playerChoice {
     position: fixed;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
+    top: 25%;
+    left: 17%;
+    transform: translate(-50%, -50%);
     z-index: 1;
+}
+
+#computerName {
+    position: fixed;
+    top: 20%;
+    right: 120px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.computer-choice {
+    position: fixed;
+    top: 25%;
+    right: -40px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+#gameResult {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+#roundsPlayed{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -127,4 +162,8 @@
         transform: translateX(-50%);
         z-index: 1;
     }
+    
 }
+
+
+

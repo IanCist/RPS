@@ -6,8 +6,9 @@ function savePlayerName() {
 }
 function resetGame() {
     document.getElementById("playerNameInput").value = "";
-    document.getElementById("playerName").innerText = "";
     document.getElementById("gameResult").innerText = "";
+    document.getElementById("playerChoice").innerText = "";
+    document.getElementById("computerChoice").innerText = "";
 }
 var savedPlayerName = localStorage.getItem("playerName")
 if (savedPlayerName) {
@@ -20,19 +21,25 @@ function computerChoice() {
     const randomIndex = Math.floor(Math.random() * choices.length);
     return choices[randomIndex];
 }
+
 function displayComputerChoice(computerMove) {
     const computerChoiceElement = document.getElementById("computerChoice");
     computerChoiceElement.innerText = "Computer's Choice: " + computerMove;
+
+    // Set the computer's name to "Computer"
+    const computerNameElement = document.getElementById("computerName");
+    computerNameElement.innerText = "Computer";
 }
+let roundsPlayed = 0; 
 
 function playGame(playerMove) {
+    roundsPlayed++;
+    document.getElementById("roundsPlayed").innerText = "Rounds Played: " + roundsPlayed;
     const computerMove = computerChoice();
     console.log("Computer's move:" + computerMove);
     console.log("Player's move: " + playerMove);
 
-
     displayComputerChoice(computerMove);
-
 
     if (playerMove === computerMove) {
         console.log("It's a tie!");
@@ -84,3 +91,5 @@ function displayResult(result) {
     const gameResultElement = document.getElementById("gameResult");
     gameResultElement.innerText = result;
 }
+
+
