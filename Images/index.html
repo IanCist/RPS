@@ -29,23 +29,23 @@
                 <button id="resetButton" onclick="resetGame()">Reset Game</button>
             </div>
         </div>
-        
+
         <div class="container">
             <div class="row">
                 <div class="box">
-                    <button>
+                    <button class="rock" data-choice="paper">
                         <img src="img\istockphoto-1193635902-612x612.jpg" alt="">
                         <div class="box-text">Rock</div>
                     </button>
                 </div>
                 <div class="box">
-                    <button>
+                    <button class="paper" data-choice="rock">
                         <img src="img/paper.jpg" alt="">
                         <div class="box-text">Paper</div>
                     </button>
                 </div>
                 <div class="box">
-                    <button>
+                    <button class="scissor" data-choice="scissors">
                         <img src="img/scissors.jpg" alt="">
                         <div class="box-text">Scissors</div>
                     </button>
@@ -53,6 +53,9 @@
             </div>
         </div>
         <div id="playerName"></div>
+        <div id="playerChoice"></div>
+        <div id="computerChoice"></div>
+        <div id="gameResult"></div>
 
 
 
