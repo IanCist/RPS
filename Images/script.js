@@ -1,15 +1,27 @@
+let roundsPlayed = 0; 
+let playerWins = 0;
+let computerWins = 0; 
+
 function savePlayerName() {
     var playerName = document.getElementById("playerNameInput").value;
     localStorage.setItem("playerName", playerName);
     document.getElementById("playerName").innerText = "Player Name: " + playerName;
     alert("Player name saved successfully!")
 }
+
 function resetGame() {
     document.getElementById("playerNameInput").value = "";
     document.getElementById("gameResult").innerText = "";
     document.getElementById("playerChoice").innerText = "";
     document.getElementById("computerChoice").innerText = "";
+    document.getElementById("roundsPlayed").innerText = "";
+    document.getElementById("playerWins").innerText = "";
+    document.getElementById("computerWins").innerText = "";
+    roundsPlayed = 0; // Reset roundsPlayed to 0
+    playerWins = 0; // Reset playerWins to 0
+    computerWins = 0; // Reset computerWins to 0
 }
+
 var savedPlayerName = localStorage.getItem("playerName")
 if (savedPlayerName) {
     document.getElementById("playerName").innerText = "Player Name: " + savedPlayerName;
@@ -30,9 +42,12 @@ function displayComputerChoice(computerMove) {
     const computerNameElement = document.getElementById("computerName");
     computerNameElement.innerText = "Computer";
 }
-let roundsPlayed = 0; 
 
 function playGame(playerMove) {
+    if (roundsPlayed >= 5) {
+        alert ("Maximum rounds played!");
+        return;
+    }
     roundsPlayed++;
     document.getElementById("roundsPlayed").innerText = "Rounds Played: " + roundsPlayed;
     const computerMove = computerChoice();
@@ -41,10 +56,6 @@ function playGame(playerMove) {
 
     displayComputerChoice(computerMove);
 
-    if (playerMove === computerMove) {
-        console.log("It's a tie!");
-        return "It's a tie!";
-    }
 
     if (
         (playerMove === "rock" && computerMove === "scissors") ||
@@ -52,10 +63,20 @@ function playGame(playerMove) {
         (playerMove === "scissors" && computerMove === "paper")
     ) {
         console.log("Player wins!");
+        playerWins++;
+        document.getElementById("playerWins").innerText = "Player Wins: " + playerWins;
+        if (playerWins === 3) {
+            alert("Player is champion!");
+        }
         return "Player wins!";
     }
 
     console.log("Computer wins!");
+    computerWins++;
+    document.getElementById("computerWins").innerText = "Computer Wins: " + computerWins;
+    if (computerWins === 3) {
+        alert("Computer is champion!");
+    }
     return "Computer wins!";
 }
 
@@ -91,5 +112,3 @@ function displayResult(result) {
     const gameResultElement = document.getElementById("gameResult");
     gameResultElement.innerText = result;
 }
-
-

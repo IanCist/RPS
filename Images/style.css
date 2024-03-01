@@ -62,6 +62,7 @@
     display: block;
     margin-bottom: 10px;
 }
+
 #resetButton {
     border-radius: 20px;
     padding: 10px;
@@ -115,10 +116,28 @@
     z-index: 1;
 }
 
-#roundsPlayed{
+#roundsPlayed {
     position: fixed;
     top: 40%;
     left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+}
+
+#playerWins {
+    position: fixed;
+    top: 60%;
+    left: 17%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+}
+
+#computerWins {
+    position: fixed;
+    top: 60%;
+    right: 120px;
     transform: translate(-50%, -50%);
     z-index: 1;
     text-align: center;
@@ -156,14 +175,12 @@
         transform: translateX(-50%);
         z-index: 1;
     }
+
     #resetButton {
         bottom: 0px;
         left: 60px;
         transform: translateX(-50%);
         z-index: 1;
     }
-    
+
 }
-
-
-
