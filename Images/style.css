@@ -86,10 +86,11 @@
 
 #playerChoice {
     position: fixed;
-    top: 25%;
+    top: 40%;
     left: 17%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    font-weight: bold;
 }
 
 #computerName {
@@ -102,10 +103,11 @@
 
 .computer-choice {
     position: fixed;
-    top: 25%;
-    right: -40px;
+    top: 40%;
+    right: 20px;
     transform: translate(-50%, -50%);
     z-index: 1;
+    font-weight: bold;
 }
 
 #gameResult {
@@ -118,7 +120,7 @@
 
 #roundsPlayed {
     position: fixed;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -137,10 +139,22 @@
 #computerWins {
     position: fixed;
     top: 60%;
-    right: 110px;
+    right: 65px;
     transform: translate(-50%, -50%);
     z-index: 1;
     text-align: center;
+}
+
+.explanation {
+    font-family: "pf-uniform", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.title {
+    font-family: "pf-uniform", sans-serif;
+font-weight: 400;
+font-style: normal;
 }
 
 @media screen and (max-width: 768px) {

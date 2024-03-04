@@ -1,14 +1,14 @@
 let roundsPlayed = 0; 
 let playerWins = 0;
 let computerWins = 0; 
-
+// saves the players name after they input it into the box 
 function savePlayerName() {
     var playerName = document.getElementById("playerNameInput").value;
     localStorage.setItem("playerName", playerName);
     document.getElementById("playerName").innerText = "Player Name: " + playerName;
     alert("Player name saved successfully!")
 }
-
+// resets different parts of the game 
 function resetGame() {
     document.getElementById("playerNameInput").value = "";
     document.getElementById("gameResult").innerText = "";
@@ -27,7 +27,7 @@ if (savedPlayerName) {
     document.getElementById("playerName").innerText = "Player Name: " + savedPlayerName;
     alert("Welcome back, " + savedPlayerName + "!");
 }
-
+// randoms choices for the computer to pick 
 function computerChoice() {
     const choices = ["rock", "paper", "scissors"];
     const randomIndex = Math.floor(Math.random() * choices.length);
@@ -44,6 +44,7 @@ function displayComputerChoice(computerMove) {
 }
 
 function playGame(playerMove) {
+    // limits the amount of rounds played to 5 
     if (roundsPlayed >= 5) {
         alert ("Maximum rounds played!");
         return;
@@ -61,7 +62,7 @@ function playGame(playerMove) {
         (playerMove === "rock" && computerMove === "scissors") ||
         (playerMove === "paper" && computerMove === "rock") ||
         (playerMove === "scissors" && computerMove === "paper")
-    ) {
+    ) { // after three rounds of the plaer winning an alert shows up that says player is champion!
         console.log("Player wins!");
         playerWins++;
         document.getElementById("playerWins").innerText = "Player Wins: " + playerWins;
@@ -70,7 +71,7 @@ function playGame(playerMove) {
         }
         return "Player wins!";
     }
-
+// after three rounds of the computer winning an alert shows up that says computer is champion!
     console.log("Computer wins!");
     computerWins++;
     document.getElementById("computerWins").innerText = "Computer Wins: " + computerWins;
@@ -80,7 +81,7 @@ function playGame(playerMove) {
     return "Computer wins!";
 }
 
-
+// allows for user to choose between rock paper or scissor 
 const rockButtons = document.querySelectorAll('.rock');
 const paperButtons = document.querySelectorAll('.paper');
 const scissorButtons = document.querySelectorAll('.scissor');
@@ -102,12 +103,12 @@ scissorButtons.forEach(button => {
         savePlayerChoice('scissors');
     });
 });
-
+// Saves the players choice 
 function savePlayerChoice(choice) {
     document.getElementById("playerChoice").innerHTML = "Players choice: " + choice;
     displayResult(playGame(choice));
 }
-
+// displays the end game results 
 function displayResult(result) {
     const gameResultElement = document.getElementById("gameResult");
     gameResultElement.innerText = result;

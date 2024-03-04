@@ -11,13 +11,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/idx2ukl.css">
 </head>
 
 <body>
     <header>
         <!-- place navbar here -->
-        <h1 style="text-align: center;"> Rock, Paper, Scissors! </h1>
-        <p style="text-align: center; padding: 20px;"> Welcome to rock paper scissors! Get ready to engage in the
+        <h1 class="title" style="text-align: center;"> Rock, Paper, Scissors! </h1>
+        <p class="explanation" style="text-align: center; padding: 20px;"> Welcome to rock paper scissors! Get ready to engage in the
             ultimate test of strategy and intuition. Choose your weapon wisely, anticipate your opponents moves, and let
             the games begin! </p>
     </header>
@@ -25,6 +26,7 @@
         <div class="button-container">
             <input type="text" id="playerNameInput" placeholder="Enter your Name">
             <div class="button-row">
+                <!-- saves the players name when enter button is clicked-->
                 <button id="enterButton" onclick="savePlayerName()">Enter</button>
                 <button id="resetButton" onclick="resetGame()">Reset Game</button>
             </div>
@@ -33,6 +35,7 @@
         <div id="computerChoice" class="computer-choice"></div>
         <div class="container">
             <div class="row">
+                <!--images for the buttons-->
                 <div class="box">
                     <button class="rock" data-choice="paper">
                         <img src="img\istockphoto-1193635902-612x612.jpg" alt="">
@@ -54,7 +57,7 @@
             </div>
         </div>
 
-        <!-- Displays player name, choice, computer choice, game result -->
+        <!-- Displays player name, choice, computer choice, game result, player wins, rounds played and computer wins-->
         <div id="playerName"></div>
         <div id="playerChoice"></div>
         <div id="computerChoice"></div>
